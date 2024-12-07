@@ -1,4 +1,14 @@
+receive vidoe with mpv:
+```bash
+#!/bin/bash
+
+socat -u udp-recv:12345,reuseaddr - | mpv --no-cache --untimed --profile=low-latency -no-correct-pts --fps=60 --osc=no -
+
+```
+video of usage: https://youtu.be/ieR7PA7saro
+
 # OPENRNDR template project
+
 
 A feature rich template for creating OPENRNDR programs based on [Gradle/Kts](https://en.wikipedia.org/wiki/Gradle).
 
